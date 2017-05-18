@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<title>Upload an image</title>
+	<script type="text/javascript" src="js/dialog-v4.js"></script>
+	<link href="css/dialog-v4.css" rel="stylesheet" type="text/css">
+	
+	<style>
+		.online {
+			color: green;
+		 }
+		 
+		.offline {
+			color: red;
+			font-size: 12px;
+			font-weight: bold;
+			font-style: italic;
+		}
+	</style>
+	
+	<script>
+	/*	date : 19 Apr 2017
+		author: natcha@tellvoice.com
+		Function check internet connection. "Heartbeat"
+		Every 4 seconds */
+		function doesConnectionExist() {
+			var NetworkStatus = document.getElementById("status");
+			
+		    var xhr = new XMLHttpRequest();
+		    
+		    var protocol = location.protocol;
+			var slashes = protocol.concat("//");
+			var host = slashes.concat(window.location.hostname);
+			
+		    var file = host;
+		    var randomNum = Math.round(Math.random() * 10000);
+		 
+		    xhr.open('HEAD', file + "?rand=" + randomNum, true);
+		    xhr.send();
+		     
+		    xhr.addEventListener("readystatechange", processRequest, false);
+		    
+		    function processRequest(e) {
+		    	
+				if (xhr.readyState == 4) {
+		        	if (xhr.status >= 200 && xhr.status < 304) {
+		          		//alert("connection exists!");
+		          		//NetworkStatus.innerHTML = "";
+		          		//NetworkStatus.innerHTML = "Online";
+						//NetworkStatus.className = "online";
+		          		
+		        	} else {
+		          		//alert("connection doesn't exist!");
+		          		NetworkStatus.innerHTML = "Internet lost connection!<br>Please refresh or close dialog.";
+						NetworkStatus.className = "offline";
+		          		
+		        	}
+		      	}
+		    }
+		}
+	
+		doesConnectionExist(); // Checked of first time.
+		setInterval(function(){ 
+			doesConnectionExist();
+			
+		}, 4000); // Every 4 seconds
+	
+	</script>
+		
+</head>
+
+<body>
+
+	<form class="form-inline" id="upl" name="upl" action="ci/index.php?upload/english" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="jbImagesDialog.inProgress();">
+		
+		<div id="upload_in_progress" class="upload_infobar"><img src="img/spinner.gif" width="16" height="16" class="spinner">Upload in progress&hellip; <div id="upload_additional_info"></div></div>
+		<div id="upload_infobar" class="upload_infobar"></div>	
+		
+		<p id="upload_form_container">
+			<input id="uploader" name="userfile" type="file" class="jbFileBox" onChange="document.upl.submit(); jbImagesDialog.inProgress();">
+		</p>
+		
+		<p id="status"></p>
+		
+		<p id="the_plugin_name"><a href="http://justboil.me/" target="_blank" title="JustBoil.me &mdash; a TinyMCE Images Upload Plugin">JustBoil.me Images Plugin</a></p>
+		
+	</form>
+
+	<iframe id="upload_target" name="upload_target" src="ci/index.php?blank"></iframe>
+
+</body>
+</html>
