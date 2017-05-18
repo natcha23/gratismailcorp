@@ -1,0 +1,38 @@
+[2017-Feb-08 11:38:42] Connection: opening to mailgw.channel.ais.co.th:25, t=300, opt=array (
+)
+[2017-Feb-08 11:38:42] Connection: opened
+[2017-Feb-08 11:38:42] SERVER -> CLIENT: 220 mailgw.channel.ais.co.th ESMTP IceWarp 10.4.5; Wed, 08 Feb 2017 11:38:43 +0700
+
+[2017-Feb-08 11:38:42] CLIENT -> SERVER: EHLO cl1dev.smm.ais.co.th
+
+[2017-Feb-08 11:38:42] SERVER -> CLIENT: 250-mailgw.channel.ais.co.th Hello cl1dev.smm.ais.co.th [10.239.252.63], pleased to meet you.
+250-ENHANCEDSTATUSCODES
+250-SIZE 10485760
+250-EXPN
+250-ETRN
+250-ATRN
+250-DSN
+250-CHECKPOINT
+250-8BITMIME
+250-AUTH PLAIN LOGIN DIGEST-MD5 CRAM-MD5 GSSAPI
+250-STARTTLS
+250 HELP
+
+[2017-Feb-08 11:38:42] CLIENT -> SERVER: MAIL FROM:<1149test1@ais.co.th>
+
+[2017-Feb-08 11:38:42] SERVER -> CLIENT: 250 2.1.0 <1149test1@ais.co.th>... Sender ok
+
+[2017-Feb-08 11:38:42] CLIENT -> SERVER: RCPT TO:<pathatai@icctech.co.th>
+
+[2017-Feb-08 11:38:42] SERVER -> CLIENT: 550 5.7.1 <pathatai@icctech.co.th>... we do not relay <1149test1@ais.co.th>
+
+[2017-Feb-08 11:38:42] SMTP ERROR: RCPT TO command failed: 550 5.7.1 <pathatai@icctech.co.th>... we do not relay <1149test1@ais.co.th>
+
+[2017-Feb-08 11:38:42] CLIENT -> SERVER: QUIT
+
+[2017-Feb-08 11:38:42] SERVER -> CLIENT: 221 2.0.0 mailgw.channel.ais.co.th closing connection
+
+[2017-Feb-08 11:38:42] Connection: closed
+[2017-Feb-08 11:38:42] SMTP Error: The following recipients failed: pathatai@icctech.co.th
+[2017-Feb-08 11:38:42] Send Fail: SMTP Error: The following recipients failed: pathatai@icctech.co.th
+[2017-Feb-08 11:38:42] ======================================================================================

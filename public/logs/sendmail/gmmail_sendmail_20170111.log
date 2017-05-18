@@ -1,0 +1,159 @@
+[2017-Jan-11 12:29:55] Connection: opening to mailgw.channel.ais.co.th:25, t=300, opt=array (
+)
+[2017-Jan-11 12:29:55] Connection: opened
+[2017-Jan-11 12:29:55] SERVER -> CLIENT: 220 mailgw.channel.ais.co.th ESMTP IceWarp 10.4.5; Wed, 11 Jan 2017 12:29:55 +0700
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: EHLO cl1dev.smm.ais.co.th
+
+[2017-Jan-11 12:29:55] SERVER -> CLIENT: 250-mailgw.channel.ais.co.th Hello cl1dev.smm.ais.co.th [10.239.252.63], pleased to meet you.
+250-ENHANCEDSTATUSCODES
+250-SIZE 10485760
+250-EXPN
+250-ETRN
+250-ATRN
+250-DSN
+250-CHECKPOINT
+250-8BITMIME
+250-AUTH PLAIN LOGIN DIGEST-MD5 CRAM-MD5 GSSAPI
+250-STARTTLS
+250 HELP
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: MAIL FROM:<1149test1@ais.co.th>
+
+[2017-Jan-11 12:29:55] SERVER -> CLIENT: 250 2.1.0 <1149test1@ais.co.th>... Sender ok
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: RCPT TO:<1149test3@ais.co.th>
+
+[2017-Jan-11 12:29:55] SERVER -> CLIENT: 250 2.1.5 <@10.13.201.23:1149test3@ais.co.th>... Recipient ok; will forward
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: RCPT TO:<nantanit@ais.co.th>
+
+[2017-Jan-11 12:29:55] SERVER -> CLIENT: 250 2.1.5 <@10.13.201.23:nantanit@ais.co.th>... Recipient ok; will forward
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: RCPT TO:<pathatai@icctech.co.th>
+
+[2017-Jan-11 12:29:55] SERVER -> CLIENT: 550 5.7.1 <pathatai@icctech.co.th>... we do not relay <1149test1@ais.co.th>
+
+[2017-Jan-11 12:29:55] SMTP ERROR: RCPT TO command failed: 550 5.7.1 <pathatai@icctech.co.th>... we do not relay <1149test1@ais.co.th>
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: DATA
+
+[2017-Jan-11 12:29:55] SERVER -> CLIENT: 354 Enter mail, end with "." on a line by itself
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: Date: Wed, 11 Jan 2017 12:29:55 +0700
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: To: 1149test3@ais.co.th, nantanit@ais.co.th
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: From: 1149 Corporate Call Center <1149test1@ais.co.th>
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: Cc: pathatai@icctech.co.th
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: Subject: =?UTF-8?B?W1NNTV0g4LiX4LiU4Liq4Lit4LiaIENvcnBvcmF0ZSdzIEVtYWls?=
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER:  =?UTF-8?B?IOC4ieC4muC4seC4muC4l+C4teC5iCAx?=
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: Message-ID: <2c3601717d724ea35bd5c42498d6bd61@cl1dev.smm.ais.co.th>
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: X-Priority: 3
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.9 (https://github.com/PHPMailer/PHPMailer/)
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: MIME-Version: 1.0
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: Content-Type: multipart/alternative;
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: 	boundary="b1_2c3601717d724ea35bd5c42498d6bd61"
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: 
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: --b1_2c3601717d724ea35bd5c42498d6bd61
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: Content-Type: text/plain; charset=UTF-8
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: Content-Transfer-Encoding: base64
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: 
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: PGRpdgpzdHlsZT0iZm9udC1mYW1pbHk6J3RhaG9tYSc7Zm9udC1zaXplOjEwcHQ7Ij48ZGl2Cmlk
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: PSJ0ZW1wbGF0ZV9jb250ZW50Ij4NCjx0YWJsZSBib3JkZXI9IjAiIGNlbGxzcGFjaW5nPSIwIiBj
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: ZWxscGFkZGluZz0iMCI+DQo8dGJvZHk+DQo8dHI+DQo8dGQgaWQ9InBpYzEiPjxpbWcKc3JjPSJo
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: dHRwOi8vYWN0aXZpdGllcy5haXMuY28udGgvYXBwL2VtYWlsX2ZpbHRlci9pbWdwYWdlLmFzcHg/
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: aWQ9OTAxIgphbHQ9IiIgYm9yZGVyPSIwIiAvPjwvdGQ+DQo8L3RyPg0KPC90Ym9keT4NCjwvdGFi
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: bGU+DQo8YnIgLz4g4LiX4LiU4Liq4Lit4Lia4LiB4Liy4Lij4Liq4LmI4LiHIEVtYWlsJ3MKY29y
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: cG9yYXRlIOC4ieC4muC4seC4muC4l+C4teC5iCAxPC9kaXY+DQo8ZGl2PjxiciAvPg0KPHRhYmxl
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: IGJvcmRlcj0iMCIgY2VsbHNwYWNpbmc9IjAiIGNlbGxwYWRkaW5nPSIwIj4NCjx0Ym9keT4NCjx0
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: cj4NCjx0ZCBpZD0icGljOCI+PGltZwpzcmM9Imh0dHA6Ly9hY3Rpdml0aWVzLmFpcy5jby50aC9h
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: cHAvZW1haWxfZmlsdGVyL2ltZ3BhZ2UuYXNweD9pZD05MDgiCmFsdD0iIiBib3JkZXI9IjAiIC8+
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: PC90ZD4NCjwvdHI+DQo8L3Rib2R5Pg0KPC90YWJsZT4NCjxiciAvPiA8YnIgLz4NCjxwPiZuYnNw
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: OzwvcD4NCjwvZGl2PjwvZGl2Pg0K
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: 
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: 
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: --b1_2c3601717d724ea35bd5c42498d6bd61
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: Content-Transfer-Encoding: base64
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: 
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: PGRpdiBzdHlsZT0iZm9udC1mYW1pbHk6J3RhaG9tYSc7Zm9udC1zaXplOjEwcHQ7Ij48ZGl2IGlk
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: PSJ0ZW1wbGF0ZV9jb250ZW50Ij4NCjx0YWJsZSBib3JkZXI9IjAiIGNlbGxzcGFjaW5nPSIwIiBj
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: ZWxscGFkZGluZz0iMCI+DQo8dGJvZHk+DQo8dHI+DQo8dGQgaWQ9InBpYzEiPjxpbWcgc3JjPSJo
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: dHRwOi8vYWN0aXZpdGllcy5haXMuY28udGgvYXBwL2VtYWlsX2ZpbHRlci9pbWdwYWdlLmFzcHg/
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: aWQ9OTAxIiBhbHQ9IiIgYm9yZGVyPSIwIiAvPjwvdGQ+DQo8L3RyPg0KPC90Ym9keT4NCjwvdGFi
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: bGU+DQo8YnIgLz4g4LiX4LiU4Liq4Lit4Lia4LiB4Liy4Lij4Liq4LmI4LiHIEVtYWlsJ3MgY29y
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: cG9yYXRlIOC4ieC4muC4seC4muC4l+C4teC5iCAxPC9kaXY+DQo8ZGl2PjxiciAvPg0KPHRhYmxl
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: IGJvcmRlcj0iMCIgY2VsbHNwYWNpbmc9IjAiIGNlbGxwYWRkaW5nPSIwIj4NCjx0Ym9keT4NCjx0
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: cj4NCjx0ZCBpZD0icGljOCI+PGltZyBzcmM9Imh0dHA6Ly9hY3Rpdml0aWVzLmFpcy5jby50aC9h
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: cHAvZW1haWxfZmlsdGVyL2ltZ3BhZ2UuYXNweD9pZD05MDgiIGFsdD0iIiBib3JkZXI9IjAiIC8+
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: PC90ZD4NCjwvdHI+DQo8L3Rib2R5Pg0KPC90YWJsZT4NCjxiciAvPiA8YnIgLz4NCjxwPiZuYnNw
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: OzwvcD4NCjwvZGl2PjwvZGl2Pg==
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: 
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: 
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: 
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: --b1_2c3601717d724ea35bd5c42498d6bd61--
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: 
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: .
+
+[2017-Jan-11 12:29:55] SERVER -> CLIENT: 250 2.6.0 2611 bytes received in 00:00:00; Message id 201701111229555205 accepted for delivery
+
+[2017-Jan-11 12:29:55] CLIENT -> SERVER: QUIT
+
+[2017-Jan-11 12:29:55] SERVER -> CLIENT: 221 2.0.0 mailgw.channel.ais.co.th closing connection
+
+[2017-Jan-11 12:29:55] Connection: closed
+[2017-Jan-11 12:29:55] SMTP Error: The following recipients failed: pathatai@icctech.co.th
+[2017-Jan-11 12:29:55] Send Fail: SMTP Error: The following recipients failed: pathatai@icctech.co.th
+[2017-Jan-11 12:29:55] ======================================================================================
+[2017-Jan-11 16:05:49] ======================================================================================

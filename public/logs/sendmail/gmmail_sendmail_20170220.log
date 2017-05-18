@@ -1,0 +1,242 @@
+[2017-Feb-20 15:09:21] Connection: opening to mailgw.channel.ais.co.th:25, t=300, opt=array (
+)
+[2017-Feb-20 15:09:21] Connection: opened
+[2017-Feb-20 15:09:21] SERVER -> CLIENT: 220 mailgw.channel.ais.co.th ESMTP IceWarp 10.4.5; Mon, 20 Feb 2017 15:09:22 +0700
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: EHLO cl1dev.smm.ais.co.th
+
+[2017-Feb-20 15:09:21] SERVER -> CLIENT: 250-mailgw.channel.ais.co.th Hello cl1dev.smm.ais.co.th [10.239.252.63], pleased to meet you.
+250-ENHANCEDSTATUSCODES
+250-SIZE 10485760
+250-EXPN
+250-ETRN
+250-ATRN
+250-DSN
+250-CHECKPOINT
+250-8BITMIME
+250-AUTH PLAIN LOGIN DIGEST-MD5 CRAM-MD5 GSSAPI
+250-STARTTLS
+250 HELP
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: MAIL FROM:<1149test1@ais.co.th>
+
+[2017-Feb-20 15:09:21] SERVER -> CLIENT: 250 2.1.0 <1149test1@ais.co.th>... Sender ok
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: RCPT TO:<darunees@ais.co.th>
+
+[2017-Feb-20 15:09:21] SERVER -> CLIENT: 250 2.1.5 <@10.13.201.23:darunees@ais.co.th>... Recipient ok; will forward
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: RCPT TO:<shiuka_d@hotmail.com>
+
+[2017-Feb-20 15:09:21] SERVER -> CLIENT: 250 2.1.5 <@10.193.21.9:shiuka_d@hotmail.com>... Recipient ok; will forward
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: DATA
+
+[2017-Feb-20 15:09:21] SERVER -> CLIENT: 354 Enter mail, end with "." on a line by itself
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: Date: Mon, 20 Feb 2017 15:09:21 +0700
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: To: darunees@ais.co.th
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: From: 1149 Corporate Call Center <1149test1@ais.co.th>
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: Subject: =?UTF-8?B?4LiK4LmI4Lin4Lii4LiU4LmJ4Lin4Lii4LiZ4Liw4LiE4Liw?=
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: Message-ID: <cf2821f83cdcf7865ba9a56c10657f65@cl1dev.smm.ais.co.th>
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: X-Priority: 3
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.9 (https://github.com/PHPMailer/PHPMailer/)
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: MIME-Version: 1.0
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: Content-Type: multipart/alternative;
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: 	boundary="b1_cf2821f83cdcf7865ba9a56c10657f65"
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: 
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: --b1_cf2821f83cdcf7865ba9a56c10657f65
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: Content-Type: text/plain; charset=UTF-8
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: Content-Transfer-Encoding: base64
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: 
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: PGRpdgpzdHlsZT0iZm9udC1mYW1pbHk6J3RhaG9tYSc7Zm9udC1zaXplOjEwcHQ7Ij48ZGl2Cmlk
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: PSJ0ZW1wbGF0ZV9jb250ZW50Ij4NCjx0YWJsZSBib3JkZXI9IjAiIGNlbGxzcGFjaW5nPSIwIiBj
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: ZWxscGFkZGluZz0iMCI+DQo8dGJvZHk+DQo8dHI+DQo8dGQgaWQ9InBpYzEiPjxpbWcKc3JjPSJo
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: dHRwOi8vYWN0aXZpdGllcy5haXMuY28udGgvYXBwL2VtYWlsX2ZpbHRlci9pbWdwYWdlLmFzcHg/
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: aWQ9ODkxIgphbHQ9IiIgYm9yZGVyPSIwIiAvPjwvdGQ+DQo8L3RyPg0KPC90Ym9keT4NCjwvdGFi
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: bGU+DQo8YnIgLz4gPGJyIC8+DQo8dGFibGUgYm9yZGVyPSIwIiBjZWxsc3BhY2luZz0iMCIgY2Vs
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: bHBhZGRpbmc9IjAiPg0KPHRib2R5Pg0KPHRyPg0KPHRkIGlkPSJwaWM4Ij48aW1nCnNyYz0iaHR0
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: cDovL2FjdGl2aXRpZXMuYWlzLmNvLnRoL2FwcC9lbWFpbF9maWx0ZXIvaW1ncGFnZS5hc3B4P2lk
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: PTg5OCIKYWx0PSIiIGJvcmRlcj0iMCIgLz48L3RkPg0KPC90cj4NCjwvdGJvZHk+DQo8L3RhYmxl
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: Pg0KPGJyIC8+IDxiciAvPg0KPHA+Jm5ic3A7PC9wPg0KPC9kaXY+PC9kaXY+DQo=
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: 
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: 
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: --b1_cf2821f83cdcf7865ba9a56c10657f65
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: Content-Transfer-Encoding: base64
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: 
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: PGRpdiBzdHlsZT0iZm9udC1mYW1pbHk6J3RhaG9tYSc7Zm9udC1zaXplOjEwcHQ7Ij48ZGl2IGlk
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: PSJ0ZW1wbGF0ZV9jb250ZW50Ij4NCjx0YWJsZSBib3JkZXI9IjAiIGNlbGxzcGFjaW5nPSIwIiBj
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: ZWxscGFkZGluZz0iMCI+DQo8dGJvZHk+DQo8dHI+DQo8dGQgaWQ9InBpYzEiPjxpbWcgc3JjPSJo
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: dHRwOi8vYWN0aXZpdGllcy5haXMuY28udGgvYXBwL2VtYWlsX2ZpbHRlci9pbWdwYWdlLmFzcHg/
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: aWQ9ODkxIiBhbHQ9IiIgYm9yZGVyPSIwIiAvPjwvdGQ+DQo8L3RyPg0KPC90Ym9keT4NCjwvdGFi
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: bGU+DQo8YnIgLz4gPGJyIC8+DQo8dGFibGUgYm9yZGVyPSIwIiBjZWxsc3BhY2luZz0iMCIgY2Vs
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: bHBhZGRpbmc9IjAiPg0KPHRib2R5Pg0KPHRyPg0KPHRkIGlkPSJwaWM4Ij48aW1nIHNyYz0iaHR0
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: cDovL2FjdGl2aXRpZXMuYWlzLmNvLnRoL2FwcC9lbWFpbF9maWx0ZXIvaW1ncGFnZS5hc3B4P2lk
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: PTg5OCIgYWx0PSIiIGJvcmRlcj0iMCIgLz48L3RkPg0KPC90cj4NCjwvdGJvZHk+DQo8L3RhYmxl
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: Pg0KPGJyIC8+IDxiciAvPg0KPHA+Jm5ic3A7PC9wPg0KPC9kaXY+PC9kaXY+
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: 
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: 
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: 
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: --b1_cf2821f83cdcf7865ba9a56c10657f65--
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: 
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: .
+
+[2017-Feb-20 15:09:21] SERVER -> CLIENT: 250 2.6.0 2267 bytes received in 00:00:00; Message id 201702201509229775 accepted for delivery
+
+[2017-Feb-20 15:09:21] CLIENT -> SERVER: QUIT
+
+[2017-Feb-20 15:09:21] SERVER -> CLIENT: 221 2.0.0 mailgw.channel.ais.co.th closing connection
+
+[2017-Feb-20 15:09:21] Connection: closed
+[2017-Feb-20 15:09:21] ======================================================================================
+[2017-Feb-20 15:17:08] Send Fail: SMTP Error: The following recipients failed: pathatai@icctech.co.th
+[2017-Feb-20 15:17:08] ======================================================================================
+[2017-Feb-20 17:02:07] Connection: opening to mailgw.channel.ais.co.th:25, t=300, opt=array (
+)
+[2017-Feb-20 17:02:07] Connection: opened
+[2017-Feb-20 17:02:07] SERVER -> CLIENT: 220 mailgw.channel.ais.co.th ESMTP IceWarp 10.4.5; Mon, 20 Feb 2017 17:02:09 +0700
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: EHLO cl1dev.smm.ais.co.th
+
+[2017-Feb-20 17:02:07] SERVER -> CLIENT: 250-mailgw.channel.ais.co.th Hello cl1dev.smm.ais.co.th [10.239.252.63], pleased to meet you.
+250-ENHANCEDSTATUSCODES
+250-SIZE 10485760
+250-EXPN
+250-ETRN
+250-ATRN
+250-DSN
+250-CHECKPOINT
+250-8BITMIME
+250-AUTH PLAIN LOGIN DIGEST-MD5 CRAM-MD5 GSSAPI
+250-STARTTLS
+250 HELP
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: MAIL FROM:<1149test1@ais.co.th>
+
+[2017-Feb-20 17:02:07] SERVER -> CLIENT: 250 2.1.0 <1149test1@ais.co.th>... Sender ok
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: RCPT TO:<darunees@ais.co.th>
+
+[2017-Feb-20 17:02:07] SERVER -> CLIENT: 250 2.1.5 <@10.13.201.23:darunees@ais.co.th>... Recipient ok; will forward
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: DATA
+
+[2017-Feb-20 17:02:07] SERVER -> CLIENT: 354 Enter mail, end with "." on a line by itself
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: Date: Mon, 20 Feb 2017 17:02:07 +0700
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: To: darunees@ais.co.th
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: From: 1149 Corporate Call Center <1149test1@ais.co.th>
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: Subject: =?UTF-8?B?U01NIENvcnAg4LiZ4Liw4LiI4LmJ4Liw?=
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: Message-ID: <c18a8af057b75434dd0cf99e441e36a4@cl1dev.smm.ais.co.th>
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: X-Priority: 3
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.9 (https://github.com/PHPMailer/PHPMailer/)
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: MIME-Version: 1.0
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: Content-Type: multipart/alternative;
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: 	boundary="b1_c18a8af057b75434dd0cf99e441e36a4"
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: 
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: --b1_c18a8af057b75434dd0cf99e441e36a4
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: Content-Type: text/plain; charset=UTF-8
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: Content-Transfer-Encoding: base64
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: 
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: PGRpdgpzdHlsZT0iZm9udC1mYW1pbHk6J3RhaG9tYSc7Zm9udC1zaXplOjEwcHQ7Ij48aDI+SGVh
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: ZGluZyZuYnNwOzwvaDI+PC9kaXY+DQo=
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: 
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: 
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: --b1_c18a8af057b75434dd0cf99e441e36a4
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: Content-Transfer-Encoding: base64
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: 
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: PGRpdiBzdHlsZT0iZm9udC1mYW1pbHk6J3RhaG9tYSc7Zm9udC1zaXplOjEwcHQ7Ij48aDI+SGVh
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: ZGluZyZuYnNwOzwvaDI+PC9kaXY+
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: 
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: 
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: 
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: --b1_c18a8af057b75434dd0cf99e441e36a4--
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: 
+
+[2017-Feb-20 17:02:07] CLIENT -> SERVER: .
+
+[2017-Feb-20 17:02:08] SERVER -> CLIENT: 250 2.6.0 939 bytes received in 00:00:00; Message id 201702201702099067 accepted for delivery
+
+[2017-Feb-20 17:02:08] CLIENT -> SERVER: QUIT
+
+[2017-Feb-20 17:02:08] SERVER -> CLIENT: 221 2.0.0 mailgw.channel.ais.co.th closing connection
+
+[2017-Feb-20 17:02:08] Connection: closed
+[2017-Feb-20 17:02:08] ======================================================================================

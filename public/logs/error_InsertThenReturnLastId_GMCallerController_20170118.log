@@ -1,0 +1,8 @@
+[2017-Jan-18 12:25:09] Exception error near line 105: "
+oci_execute(): ORA-00001: unique constraint (ACCSMMCORP.GM_MAILS_PK) violated"
+INSERT INTO GM_MAILS (MAIL_ID,SUID,FOLDER_ID,EMAIL,SUBJECT,FROM_NAME,SENT_FROM,SENT_TO,SENT_CC,SENT_BCC,REPLY_TO,UDATE,MASSAGE_NO,RECENT,FLAGGED,ANSWERED,DELETED,SEEN,DRAFT,IS_FROM_CHAT,CREATED_AT,UPDATED_AT) VALUES ( 
+							 SEQ_MAIL_ID.nextval,
+							:suid,:folder_id,:email,:subject,:from_name,:sent_from,:sent_to,:sent_cc,:sent_bcc,:reply_to,:udate,:massage_no,:recent,:flagged,:answered,:deleted,:seen,:draft,:is_from_chat,
+							 TO_Date( '2017-01-18 12:20:04', 'YYYY-MM-DD HH24:MI:SS'),
+							 TO_Date( '2017-01-18 12:25:01', 'YYYY-MM-DD HH24:MI:SS')
+							) returning MAIL_ID into :id
