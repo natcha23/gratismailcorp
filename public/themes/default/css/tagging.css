@@ -1,0 +1,74 @@
+/* Tagging Basic Style */
+.tagging {
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  cursor: text;
+  font-size: 1em;
+  height: auto;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+.tag {
+  /*background: none repeat scroll 0 0 #418906;*/
+  background: #DBF6B5;
+  border: 1px solid #418906;
+  border-radius: 2px;
+  color: #418906;
+  cursor: default;
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  padding: 2px 20px 2px 0;
+  margin: 0px 5px 0px 0px;
+}
+.tag span {
+  background: none repeat scroll 0 0 #D66806;
+  border-radius: 2px 0 0 2px;
+  margin-right: 5px;
+  padding: 5px 10px 5px;
+}
+.tag:hover .tag-i {
+  color: rgba(65, 137, 6, 1);
+}
+.tag .tag-i {
+  color: rgba(65, 137, 6, 0.5);
+  cursor: pointer;
+  font-size: 1.3em;
+  height: 0;
+  line-height: 0.1em;
+  position: absolute;
+  right: 5px;
+  top: 0.55em;
+  text-align: center;
+  width: 10px;
+}
+.tag .tag-i:hover {
+  color: rgba(65, 137, 6, 1);
+  text-decoration: none;
+}
+.type-zone {
+  border: 0 none;
+  height: auto;
+  width: auto;
+  min-width: 20px;
+  display: inline-block;
+}
+.type-zone:focus {
+  outline: none;
+}
+
+/* custome */
+.tagging-row.input-group {
+  margin-bottom: 10px;
+}
+.tagging-row.input-group .tagging {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.email .tag {
+  padding-left: 8px;
+  margin: 1px 4px 1px 1px;
+}
+.email .tag span {
+  display: none;
+}

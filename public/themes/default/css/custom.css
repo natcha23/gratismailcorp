@@ -1,0 +1,335 @@
+/*------------------------------------------
+ * Global
+ *------------------------------------------
+ * Master color
+ * - #418906 (Green)
+ * - #DDD (Tabs, Menu bar)
+ */
+a.disable-link {
+  color: #999;
+  text-decoration: none;
+}
+a.disable-link:hover, a.disable-link.active {
+  color: #333;
+}
+.no-border {
+  border: 0;
+}
+.no-border-radius {
+  border-radius: 0 !important;
+}
+.sub-description {
+  font-size: 10px;
+}
+
+/*------------------------------------------
+ * Header
+ *------------------------------------------
+ */
+.navbar-ais a {
+  color: #418906 !important;
+}
+
+/*------------------------------------------
+ * Body
+ *------------------------------------------
+ */
+html, body, body .container-fluid, body .container-fluid .row {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  padding-top: 50px;
+}
+/*body #sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  height: 100% !important;
+  width: 150px;
+  border-right: 1px solid #DDD;
+  background: #EFEFEF;
+  color: #444;
+}*/
+body #sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  height: 100% !important;
+  width: 44px;
+  border-right: 1px solid #DDD;
+  background: #EFEFEF;
+  color: #444;
+}
+body #sidebar ul#folders {
+  margin: 0;
+  padding: 20px 0 0 0;
+  list-style: none;
+}
+body #sidebar ul#folders li a {
+  width: 100%;
+  display: inline-block;
+  padding: 8px 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  color: #418906;
+  text-align: center;
+}
+body #sidebar ul#folders li a:hover,
+body #sidebar ul#folders li.active a {
+  background: #DDD;
+  color: #333;
+}
+body #sidebar ul#folders li a i {
+  width: 15px;
+  margin-right: 3px;
+}
+body #sidebar hr {
+  border-color: #ddd;
+}
+body #sidebar .compose-email {
+  padding-top: 20px;
+}
+body #sidebar .compose-email a {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+}
+/*body #content {
+  margin-left: 150px;
+  min-width: 500px;
+}*/
+body #content {
+  margin-left: 44px;
+  min-width: 500px;
+}
+body #content article {
+  padding: 15px 20px;
+}
+body #content ul#control {
+  position: fixed;
+  width: 100%;
+  list-style: none;
+  top: 51px;
+  padding: 0;
+  margin: 0;
+  background: #EEE;
+  border-bottom: 1px solid #DDD;
+  z-index: 999;
+}
+body #content ul#control li {
+  display: inline-block;
+}
+body #content ul#control li a {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #418906;
+}
+body #content ul#control li.break {
+  border-left: 1px solid #bbb;
+  width: 1px;
+  height: 10px;
+}
+body #content ul#control li a:hover {
+  color: #333;
+  background: #E0E0E0;
+}
+body #content ul#control li a i {
+  margin-right: 3px;
+}
+body #content ul#control li:first-child a {
+  margin-left: 10px;
+}
+body #content h2.header {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  padding: 0 0 14px 0;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+}
+body #content h2.header a.disable-link {
+  font-size: 14px;
+  color: #999;
+  cursor: pointer;
+}
+body #content h2.header a.disable-link.active {
+  color: #418906;
+}
+body #content h2.header .information {
+  padding-top: 10px;
+}
+body #content .text {
+  padding-top: 20px;
+}
+body #content .attachment {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #DDD;
+}
+body #content .attachment ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body #content .attachment ul li {
+  display: inline-block;
+}
+body #content .attachment ul li a.remove {
+  padding: 0;
+  border: 0;
+  background: 0;
+  position: absolute;
+  top: 6px;
+  right: 9px;
+}
+body #content .attachment ul li a.remove:hover {
+  background: none;
+  color: #F00;
+}
+body #content .attachment ul li a {
+  display: inline-block;
+  padding: 5px 25px 5px 10px;
+  margin-bottom: 4px;
+  border: 1px solid #DDD;
+  background: #EFEFEF;
+  color: #666;
+  text-decoration: none;
+}
+body #content .attachment ul li a:hover {
+  background: #DDD;
+  border-color: #CCC;
+  color: #418906;
+}
+body #content .attachment .checkbox {
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+body #content article#mail {
+  margin-top: 38px;
+  padding: 15px 20px;
+}
+body #content .mail.control {
+  margin-left: 15px;
+  padding-left: 7px;
+}
+body #content .mail.control a.btn {
+  padding: 10px 8px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #009100;
+  border-radius: 2px;
+}
+body #content .mail.control a.btn:hover {
+  background: #EEE;
+  color: #333;
+}
+body #content .mail.control [name=all] {
+  margin-right: 15px !important;
+}
+body #content .inbox tr.unseen {
+  background: #EFEFEF;
+}
+body #content .inbox .subject a {
+  font-weight: bold;
+}
+body #content .inbox .reviews a {
+  font-size: 11px;
+  color: #AAA;
+}
+body #content table.table.inbox tr:hover .reviews a {
+  color: #333;
+}
+body #content td > ul.pagination {
+  margin: 0;
+}
+body #content ul.templates {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+body #content ul.templates li {
+  display: inline-block;
+  margin-right: 2px;
+}
+body #content ul.templates li a {
+  display: block;
+  padding: 6px 10px;
+  background: #EEE;
+}
+body #content ul.templates li a.active {
+  background: #418906;
+  color: #FFF;
+}
+body.page-mail #content .alert {
+  margin-top: 38px;
+}
+table.table tr {
+  color: #666;
+}
+table.table tr:hover {
+  background: rgba(239, 239, 239, 0.5);
+}
+table.table tr a {
+  color: rgba(65, 137, 6, 0.7);
+  text-decoration: none;
+}
+table.table tr:hover a {
+  color: rgba(65, 137, 6, 1);
+}
+form .form-group {
+  margin-top: 10px;
+}
+form .form-group .dropzone {
+  background: #EEE;
+  padding: 20px;
+  border: 2px solid #EEE;
+  color: #999;
+  cursor: pointer;
+}
+form .form-group .dropzone:hover {
+  border: 2px solid #CCC;
+  color: #333;
+}
+
+/* Login page */
+body.page-login #content {
+  margin-left: 0;
+}
+body.page-login #content .login-panel {
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  color: #333;
+  background: #EFEFEF;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+}
+
+/* email detail */
+.gmail_quote {
+  margin-left: 0.8ex;
+  padding: 1ex;
+  border-left: 1px solid #ccc;
+}
+
+/* prints */
+@media print {
+  body {
+    padding-top: 0 !important;
+  }
+  #content {
+    min-width: auto !important;
+    margin: 0 !important;
+  }
+}
