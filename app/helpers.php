@@ -6,11 +6,7 @@ function pr($object){
   echo '</pre>';
 }
 
-/*
- *  2017 March, 28
- *  natcha@tellvoice.com
- *  Display debug.
- */
+// author: natcha; date: 2017-03-28
 function _print($data=null) {
 	echo 'Developer is debugging.'.'</br></br>';
 	if(!empty($data)) {
@@ -19,28 +15,6 @@ function _print($data=null) {
 		echo 'empty data!';
 	}
 }
-
-/*
- * 2017 May, 17
- * natcha@tellvoice.com
- * Find - Is first character html tag. 
- */
-function firstCharacterIsHTMLTag($content=null) {
-
-	if (empty($content)) { return false; }
-
-	$body_pattern = "/^\s*<[html|meta](.*?)>/s"; // Finded <tr..>...<tr..> excepted <tr..>...</tr><tr..>
-	preg_match_all($body_pattern, $content, $body_matches, PREG_OFFSET_CAPTURE);
-
-	if (!empty($body_matches[0])) {
-		return true;
-
-	} else {
-		return false;
-	}
-
-}
-
 
 function get_priority($type, $subtype, $language, $feature01 = '', $feature02 = '', $feature03 = '', $feature04 = ''){
   // return [$type, $subtype, $language];
