@@ -41,6 +41,9 @@ function firstCharacterIsHTMLTag($content=null) {
 
 }
 
+/* 2017 May, 22
+ * natcha@tellvoice.com
+ * Log file - Show error log for imap mail. */
 function write_renderemail_log($message, $file_name = 'gmmail_detail')
 {
 	$datetime = date('Ymd');
