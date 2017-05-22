@@ -21,6 +21,41 @@ function _print($data=null) {
 }
 
 /*
+ * 2017 Apr, 05
+ * natcha@tellvoice.com
+ * ===========
+ * Fill - <td> tag for display on tinymce.
+ * ===========
+ */
+function substituteHtmlSpecialContent($content=NULL) {
+	if (empty($content)) {	return null;	}
+	$newstr = $content;
+	$str_to_insert = "</td>";
+	$count_str = strlen($str_to_insert);
+
+	$body_pattern = "/<tr(.*?)>(.*?)[^<\/td><\/tr><tr]/s";
+	preg_match_all($body_pattern, $content, $body_matches, PREG_OFFSET_CAPTURE);
+
+	$num = count($body_matches[0]);
+	$increase = $separate = 0;
+	foreach($body_matches[0] as $index => $element) {
+		$increase+=1;
+
+		if ($increase < $num) {
+			$position = $body_matches[0][$increase][1];
+				
+			if($index > 0) {
+				$separate+=$count_str; // </td> is 5 characters.
+				$position = $position+$separate;
+			}
+			$newstr = substr_replace($newstr, $str_to_insert, $position, 0); //insert string at position define.
+		}
+
+	}
+	return $newstr;
+}
+
+/*
  * 2017 May, 17
  * natcha@tellvoice.com
  * Find - Is first character html tag. 
