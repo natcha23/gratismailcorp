@@ -131,12 +131,8 @@ class GMCallerController extends BaseController {
 					$mail_in_case = CASEINFO::where('CASECREATEDDT', '=', date('Y-m-d H:i:s', $mail->udate))->where('FEEDUSERID', '=', $mail_from_server->fromAddress)->where('feature01', '=', Session::get('logged_in')->username)->first();
 
 					/* ignore email lists */
-					
-					$environment = App::environment();
-					
-					$ignore_lists = array(EMAIL_PRODUCTION);	// Prod Env
-//					$ignore_lists = array('1149test1@ais.co.th');			// Dev Env
-// 					$ignore_lists = array('corporatecallcenter@ais.co.th');	//Prod Env
+//					$ignore_lists = array('1149test1@ais.co.th');	// Dev Env
+					$ignore_lists = array('corporatecallcenter@ais.co.th');	//Prod Env
 //					$ignore_lists = array('corporatecallcenter@ais.co.th','1149test1@ais.co.th');
 					if(!$mail_in_case AND !in_array($mail_from_server->fromAddress, $ignore_lists))
 					{
@@ -243,9 +239,7 @@ class GMCallerController extends BaseController {
 					/* ignore email lists */
 //					$ignore_lists = array('1149test1@ais.co.th');	// Dev Env
 //					$ignore_lists = array('corporatecallcenter@ais.co.th');	//Prod Env
-
-// 					$ignore_lists = array('corporatecallcenter@ais.co.th','1149test1@ais.co.th');
-					$ignore_lists = array(EMAIL_PRODUCTION, EMAIL_DEVELOP);
+					$ignore_lists = array('corporatecallcenter@ais.co.th','1149test1@ais.co.th');
 					if(!$mail_in_case AND !in_array($mail_from_server->fromAddress, $ignore_lists))
 					{
 

@@ -127,10 +127,19 @@ class GMMailController extends BaseController {
 		endif;
 
 		$mail_attachments = removeImageInlineFromAttachmentLists(GMAttachment::where('mail_id', '=', $mail_id)->get(), $mail->text);
-		$count_meta = substr_count($mail->text, "<meta");
-		if ($count_meta == 0) {
+// 		$count_meta = substr_count($mail->text, "<meta");
+// 		if ($count_meta == 0) {
+// 			$mail->text = nl2br($mail->text);
+// 		}
+		/* check first character text email.
+		 * 2017 may, 18
+		 * natcha@tellvoice.com
+		 */
+		$is_html_format = firstCharacterIsHTMLTag($mail->text);
+		if (!$is_html_format) {
 			$mail->text = nl2br($mail->text);
 		}
+		
 		if($mail->folder_id == 4):
 			$libs = ['ckeditor', 'dropzone'];
 			Session::put('mail_draft', $mail);
@@ -207,8 +216,17 @@ class GMMailController extends BaseController {
 		//$mail->sent_to_blockquote = implode(', ', $sent_to_blockquote_temp);
 		
 		// 2017-03-29
-		$count_meta = substr_count($mail->text, "<meta");
-		if ($count_meta == 0) {
+// 		$count_meta = substr_count($mail->text, "<meta");
+// 		if ($count_meta == 0) {
+// 			$mail->text = nl2br($mail->text);
+// 		}
+
+		/* check first character text email.
+		 * 2017 may, 18
+		 * natcha@tellvoice.com
+		 */
+		$is_html_format = firstCharacterIsHTMLTag($mail->text);
+		if (!$is_html_format) {
 			$mail->text = nl2br($mail->text);
 		}
 
@@ -317,8 +335,16 @@ class GMMailController extends BaseController {
 		$mail->sending_name = $sender->acctname;
 		
 		// 2017-03-29
-		$count_meta = substr_count($mail->text, "<meta");
-		if ($count_meta == 0) {
+// 		$count_meta = substr_count($mail->text, "<meta");
+// 		if ($count_meta == 0) {
+// 			$mail->text = nl2br($mail->text);
+// 		}
+		/* check first character text email.
+		 * 2017 may, 18
+		 * natcha@tellvoice.com
+		 */
+		$is_html_format = firstCharacterIsHTMLTag($mail->text);
+		if (!$is_html_format) {
 			$mail->text = nl2br($mail->text);
 		}
 		
