@@ -818,9 +818,11 @@ class GMMailController extends BaseController {
 
 		$aisHost = 'http://activities.ais.co.th';
 		$newfile = 'public/files/images/';
-		$publicHost = 'http://dev.smm.ais.co.th/SMMGetInfo/gratismailcorp/';	// dev
+		
+//		$publicHost = 'http://dev.smm.ais.co.th/SMMGetInfo/gratismailcorp/';	// dev
 //		$publicHost = 'http://202.149.30.144/SMMGetInfo/gratismailcorp/';		// prod
 //		$publicHost = 'http://crawl3.smm.ais.co.th/SMMGetInfo/gratismailcorp/';	// prod
+		$publicHost = _PUBLIC_HOST_;
 
 		$pattern = '%' . $aisHost . '(.*?)"%isu';
 		preg_match_all($pattern, $html, $matches);
@@ -972,9 +974,10 @@ class GMMailController extends BaseController {
 	public static function replaceImageSourceToTellvoicePath($text)
 	{
 		$patternDetectAllImageInlineInEmailMessage = '%<img\s[^>]*?src\s*=\s*[\'\"]([^\'\"]*?)[\'\"][^>]*?>%siu';
-		$publicFilePath = 'http://dev.smm.ais.co.th/SMMGetInfo/gratismailcorp/public/attachments/'; // dev
+		//$publicFilePath = 'http://dev.smm.ais.co.th/SMMGetInfo/gratismailcorp/public/attachments/'; // dev
 		//$publicFilePath = 'http://202.149.30.144/SMMGetInfo/gratismailcorp/public/attachments/'; // production
 		//$publicFilePath = 'http://crawl3.smm.ais.co.th/SMMGetInfo/gratismailcorp/public/attachments/'; // production
+		$publicFilePath = _PUBLIC_ATTACHMENTS_PATH_;
 		preg_match_all($patternDetectAllImageInlineInEmailMessage, $text, $imgTagInMessage, PREG_PATTERN_ORDER);
 
 		self::ifNoFolderDateThenCreateIt();
