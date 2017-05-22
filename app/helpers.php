@@ -41,7 +41,7 @@ function firstCharacterIsHTMLTag($content=null) {
 
 }
 
-function write_email_log($message, $file_name = 'gmmail_detail')
+function write_renderemail_log($message, $file_name = 'gmmail_detail')
 {
 	$datetime = date('Ymd');
 	_write_log('logs/caller/'.($file_name ? $file_name.'_' : '').$datetime.'.log', $message);
