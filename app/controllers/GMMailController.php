@@ -229,13 +229,6 @@ class GMMailController extends BaseController {
 		if (!$is_html_format) {
 			$mail->text = nl2br($mail->text);
 		}
-		
-		/* Fill <td> table format for display on tinymce. 
-		 * 2017-03-29
-		 */ 
-		if(Session::get('logged_in')->username == 'smmcorporate@ais.co.th') {
-			$mail->text = GMMailController::checkFormatContent($mail->text);
-		}
 
 		Session::forget('mail_draft');
 		Session::forget('mail_edit');
@@ -353,13 +346,6 @@ class GMMailController extends BaseController {
 		$is_html_format = firstCharacterIsHTMLTag($mail->text);
 		if (!$is_html_format) {
 			$mail->text = nl2br($mail->text);
-		}
-		
-		/* Fill <td> table format for display on tinymce.
-		 * 2017-03-29
-		 */
-		if(Session::get('logged_in')->username == 'smmcorporate@ais.co.th') {
-			$mail->text = GMMailController::checkFormatContent($mail->text);
 		}
 		
 		Session::forget('mail_draft');
@@ -1045,37 +1031,6 @@ class GMMailController extends BaseController {
 		// $checking = imap_check($mailbox->getImapStream());
 		// Func::pr($checking);
 		// return View::make('test_test');
-	}
-	
-	/*
-	 * Check email content format.
-	 * natcha@tellvoice.com
-	 * 2017-04-07
-	 */
-	public static function checkFormatContent($content=NULL) {
-		if(empty($content)) { return null; }
-	
-		$do_substitute_html = false;
-		$special_mail_pattern = '/\w*(.*)\w+@denso.co.th/i'; // emailname@denso.co.th
-		preg_match_all($special_mail_pattern, $content, $chk_special_email);
-			
-		/* Checked email from denso.co.th */
-		if (!empty($chk_special_email[0])) {
-			$do_substitute_html = true;
-		}
-			
-		/* Strip tag script <![if !supportLists]>  <![endif]> */
-		$strip_tag_pattern = '/<!\[\w*\s*!*\w+\]>/s';// <![if !supportLists]>, <![endif]>
-		$strip_content = preg_replace($strip_tag_pattern, '$1', $content);
-		$result = $strip_content;
-		if ($do_substitute_html) {
-			$count_table_tag = substr_count($strip_content, '<table');
-			if ($count_table_tag > 0) {
-				$result = substituteHtmlSpecialContent($strip_content);
-			}
-		}
-	
-		return $result;
 	}
 }
 ?>
