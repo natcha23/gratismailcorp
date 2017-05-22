@@ -11,15 +11,6 @@
  *
  * Version: 2.3 released 23/06/2013
  */
-
-/* 26 Apr 2017 : natcha@tellvoice.com 
- * Define domain name 
- * because _DOMAIN_ in bootstrap/start.php is not used in this library
- * for use in ci/application/controllers/uploader.php
- */
-define('_HTTP_REQUEST_', $_SERVER['REQUEST_SCHEME']."://");
-define('__DOMAIN__', _HTTP_REQUEST_. $_SERVER['HTTP_HOST']);
-
  
 /*
   
@@ -46,7 +37,7 @@ define('__DOMAIN__', _HTTP_REQUEST_. $_SERVER['HTTP_HOST']);
 | 
 | -------------------------------------------------------------------*/
 
-
+	
 //	$config['img_path'] = '/SMMGetInfo/gratismailcorp/public/files/images'; // Relative to domain name
 	$config['img_path'] = '/SMMGetInfo/gratismailcorp/public/files/images/'.date('Ymd'); // Relative to domain name -- change by pour 20161028
 	$config['upload_path'] = $_SERVER['DOCUMENT_ROOT'] . $config['img_path']; // Physical path. [Usually works fine like this]

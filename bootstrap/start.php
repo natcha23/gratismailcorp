@@ -27,44 +27,8 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(array(
 
 	'local' => array('homestead'),
-		
-// 	'develop' => array('cl1dev.smm.ais.co.th'),
-// 	'staging' => array(''),
-// 	'production' => array(''),
 
 ));
-
-$env = $app->detectEnvironment(function() {
-	return 'develop';
-});
-
-// The environment is local
-define('_HTTP_REQUEST_', $_SERVER['REQUEST_SCHEME']."://");
-define('_DOMAIN_', _HTTP_REQUEST_. $_SERVER['HTTP_HOST']);
-
-$project = explode(DIRECTORY_SEPARATOR, $_SERVER['SCRIPT_NAME']);
-define('_APP_DIR_', DIRECTORY_SEPARATOR . $project[1] . DIRECTORY_SEPARATOR . $project[2] . DIRECTORY_SEPARATOR); // equal /SMMGetInfo/gratismailcorp/
-
-isset($emailAddress);
-define('EMAIL_DEVELOP', '1149test1@ais.co.th');
-define('EMAIL_PRODUCTION', 'corporatecallcenter@ais.co.th');
-$mailAddress = ($env == 'production')? EMAIL_PRODUCTION : EMAIL_DEVELOP;
-define('_MAIL_ADDRESS_', $emailAddress);
-
-/* 
-$publicHost = 'http://dev.smm.ais.co.th   /SMMGetInfo/gratismailcorp/';	// dev
-$publicHost = 'http://202.149.30.144      /SMMGetInfo/gratismailcorp/';	// prod
-$publicHost = 'http://crawl3.smm.ais.co.th/SMMGetInfo/gratismailcorp/';	// prod
-*/
-define('_PUBLIC_HOST_', _DOMAIN_ . _APP_DIR_ );
-
-/* 
-$publicFilePath = 'http://dev.smm.ais.co.th   /SMMGetInfo/gratismailcorp/public/attachments/'; // dev
-$publicFilePath = 'http://202.149.30.144      /SMMGetInfo/gratismailcorp/public/attachments/'; // production
-$publicFilePath = 'http://crawl3.smm.ais.co.th/SMMGetInfo/gratismailcorp/public/attachments/'; // production 
-*/
-define('_PUBLIC_ATTACHMENTS_PATH_', _DOMAIN_ . _APP_DIR_ . 'public/attachments/');
-	
 
 /*
 |--------------------------------------------------------------------------

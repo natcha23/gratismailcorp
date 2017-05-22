@@ -97,8 +97,6 @@ class Uploader extends CI_Controller {
 			$result['result']		= "file_uploaded";
 			$result['resultcode']	= 'ok';
 			$result['file_name']	= $conf['img_path'] . '/' . $result['file_name'];
-			// Add for dynamic host.
-			$result['host_name']	= __DOMAIN__;//"http://cl1dev.smm.ais.co.th";
 			
 			// Output to user
 			$this->load->view('ajax_upload_result', $result);

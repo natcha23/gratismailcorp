@@ -60,7 +60,8 @@ var jbImagesDialog = {
 			
 			var w = this.getWin();
 			tinymce = w.tinymce;
-			tinymce.EditorManager.activeEditor.insertContent('<img src="'+result.hostname + result.filename +'">');
+		
+			tinymce.EditorManager.activeEditor.insertContent('<img src="http://dev.smm.ais.co.th' + result.filename +'">');
 			
 			this.close();
 		}

@@ -60,14 +60,7 @@ Examples:
 
 ATTENTION: The trailing slash is required.
 */
-
-// if (!defined(_BASE_URL_)) {
-define('_BASEURL_HTTP_REQUEST_', $_SERVER['REQUEST_SCHEME'] . "://");
-define('_BASE_URL_', _BASEURL_HTTP_REQUEST_. $_SERVER['HTTP_HOST']);
-// }
-
-$baseUrl = _BASE_URL_.'/SMMGetInfo/gratismailcorp/public/files/';
-// $baseUrl = 'http://dev.smm.ais.co.th/SMMGetInfo/gratismailcorp/public/files/';
+$baseUrl = 'http://dev.smm.ais.co.th/SMMGetInfo/gratismailcorp/public/files/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the
@@ -314,7 +307,7 @@ $config['ChmodFolders'] = 0755 ;
 
 /*
 Force ASCII names for files and folders.
-If enabled, characters with diactric marks, like รฅ, รค, รถ, ฤ�, ฤ�, ฤ‘, ลก
+If enabled, characters with diactric marks, like å, ä, ö, ć, č, đ, š
 will be automatically converted to ASCII letters.
 */
 $config['ForceAscii'] = false;
