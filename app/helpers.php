@@ -41,6 +41,11 @@ function firstCharacterIsHTMLTag($content=null) {
 
 }
 
+function write_renderemail_log($message, $file_name = 'gmmail_detail')
+{
+	$datetime = date('Ymd');
+	_write_log('logs/rendermail/'.($file_name ? $file_name.'_' : '').$datetime.'.log', $message);
+}
 
 function get_priority($type, $subtype, $language, $feature01 = '', $feature02 = '', $feature03 = '', $feature04 = ''){
   // return [$type, $subtype, $language];

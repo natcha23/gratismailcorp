@@ -96,6 +96,11 @@ class GMMailController extends BaseController {
 			
 			} catch ( Exception $e ) {
 				//echo "Caught exception : <b>".$e->getMessage()."</b><br/>";
+				write_renderemail_log('[ ' . date('Y-m-d H:i:s') . ' ]\n ' );
+				write_renderemail_log('Error: ' . $e->getMessage() . '\n');
+				write_renderemail_log('CASE ID: ' . Request::get('CASEID') . '; MAIL ID: ' . $mail->suid . '\n');
+				write_renderemail_log('=========================================================\n\n' );
+				
 				return View::make('mail-detail')->with(['title' => $mail->subject, 'mail' => $mail, 'attachments' => $mail_attachments]);die();
 			}
 			
