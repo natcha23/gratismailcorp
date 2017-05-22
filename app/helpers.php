@@ -11,12 +11,38 @@ function pr($object){
  *  natcha@tellvoice.com
  *  Display debug.
  */
-function _print($data=null) {
-	echo 'Developer is debugging.'.'</br></br>';
-	if(!empty($data)) {
-		echo '<pre>'.print_r($data, 1).'</pre>';
+function _print($data=null, $hide=true) {
+	
+	if (!empty($hide) && $hide) {
+		$isIPDebuggers = isIPDebuggers();
+		if($isIPDebuggers) {
+			echo 'Developer is debugging.'.'</br></br>';
+			if(!empty($data)) {
+				echo '<pre>'.print_r($data, 1).'</pre>';
+			} else {
+				echo 'empty data!';
+			}
+		}
+		
 	} else {
-		echo 'empty data!';
+		
+		echo 'Developer is debugging.'.'</br></br>';
+		if(!empty($data)) {
+			echo '<pre>'.print_r($data, 1).'</pre>';
+		} else {
+			echo 'empty data!';
+		}
+	}
+}
+
+function isIPDebuggers() {
+	$debugIP = "127.0.0.1";
+	$machineIP = $_SERVER['REMOTE_ADDR'];
+	
+	if ($machineIP == $debugIP) {
+		return true;
+	} else {
+		return false;
 	}
 }
 
