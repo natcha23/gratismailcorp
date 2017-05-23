@@ -12,14 +12,54 @@ function pr($object){
  *  Display debug.
  */
 function _print($data=null) {
-	echo 'Developer is debugging.'.'</br></br>';
+
+	echo '</br></br>Developer is debugging.'.'</br>';
 	if(!empty($data)) {
 		echo '<pre>'.print_r($data, 1).'</pre>';
 	} else {
-		echo 'empty data!';
+		echo '<pre>'.print_r('empty data!', 1).'</pre>';
+	}
+	
+}
+
+/*
+ *  2017 May, 23
+ *  natcha@tellvoice.com
+ *  Display resource depend IP.
+ */
+function _dprint($data=null, $hide=false, $ipDebugger='127.0.0.1') {
+	
+	if (!empty($hide) && $hide) {
+		$isIPDebuggers = isIPDebuggers($ipDebugger);
+		if($isIPDebuggers) {
+			echo '</br></br>Developer is debugging.'.'</br>';
+			if(!empty($data)) {
+				echo '<pre>'.print_r($data, 1).'</pre>';
+			} else {
+				echo '<pre>'.print_r('empty data!', 1).'</pre>';
+			}
+		}
+		
+	} else {
+		echo '</br></br>Developer is debugging.'.'</br>';
+		if(!empty($data)) {
+			echo '<pre>'.print_r($data, 1).'</pre>';
+		} else {
+			echo '<pre>'.print_r('empty data!', 1).'</pre>';
+		}
 	}
 }
 
+function isIPDebuggers($debugIP) {
+	
+	$machineIP = $_SERVER['REMOTE_ADDR'];
+	
+	if ($machineIP == $debugIP) {
+		return true;
+	} else {
+		return false;
+	}
+}
 /*
  * 2017 May, 17
  * natcha@tellvoice.com
