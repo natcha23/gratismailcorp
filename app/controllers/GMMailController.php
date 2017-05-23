@@ -1060,14 +1060,11 @@ class GMMailController extends BaseController {
 		if (!empty($count_densomail)) {
 			$do_substitute_html = true;
 		}
-		/* Strip tag script <![if !supportLists]>  <![endif]> */
-		$strip_tag_pattern = '/<!\[\w*\s*!*\w+\]>/s';// <![if !supportLists]>, <![endif]>
-		$strip_content = preg_replace($strip_tag_pattern, '$1', $content);
-		$result = $strip_content;
+		$result = $content;
 		if ($do_substitute_html) {
-			$count_table_tag = substr_count($strip_content, '<table');
+			$count_table_tag = substr_count($content, '<table');
 			if ($count_table_tag > 0) {
-				$result = substituteHtmlSpecialContent($strip_content);
+				$result = substituteHtmlSpecialContent($content);
 			}
 		}
 	
