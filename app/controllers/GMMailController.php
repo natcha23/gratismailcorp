@@ -1055,14 +1055,11 @@ class GMMailController extends BaseController {
 		if(empty($content)) { return null; }
 	
 		$do_substitute_html = false;
-		$special_mail_pattern = '/\w*(.*)\w+@denso.co.th/i'; // emailname@denso.co.th
-		preg_match_all($special_mail_pattern, $content, $chk_special_email);
-			
+		$count_densomail = substr_count($content, '@denso.co.th')	;		
 		/* Checked email from denso.co.th */
-		if (!empty($chk_special_email[0])) {
+		if (!empty($count_densomail)) {
 			$do_substitute_html = true;
 		}
-			
 		/* Strip tag script <![if !supportLists]>  <![endif]> */
 		$strip_tag_pattern = '/<!\[\w*\s*!*\w+\]>/s';// <![if !supportLists]>, <![endif]>
 		$strip_content = preg_replace($strip_tag_pattern, '$1', $content);
