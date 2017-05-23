@@ -44,10 +44,15 @@ function firstCharacterIsHTMLTag($content=null) {
 /* 2017 May, 22
  * natcha@tellvoice.com
  * Log file - Show error log for imap mail. */
-function write_renderemail_log($message, $file_name = 'gmmail_detail')
+function write_renderemail_log($message, $file_name = 'gmmail_detail', $path = 'logs/rendermail/')
 {
 	$datetime = date('Ymd');
-	_write_log('logs/rendermail/'.($file_name ? $file_name.'_' : '').$datetime.'.log', $message);
+	$log_path = public_path($path);
+	// Make sure create folder.
+	if (!is_dir($log_path)) {
+		mkdir($log_path, 0777, true);
+	}
+	_write_log( $path . ($file_name ? $file_name.'_' : '') . $datetime.'.log', $message);
 }
 
 function get_priority($type, $subtype, $language, $feature01 = '', $feature02 = '', $feature03 = '', $feature04 = ''){
